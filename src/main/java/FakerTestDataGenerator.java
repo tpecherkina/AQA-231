@@ -5,22 +5,28 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public class FakerTestDataGenerator {
-
-    private final Faker faker = new Faker(new Locale("ru"));
-
-    public String city() {
-        return faker.address().cityName();
+    private FakerTestDataGenerator() {
     }
 
-    public String name() {
-        return faker.name().fullName();
+        public static String generateName() {
+            Faker faker = new Faker(new Locale("ru"));
+            String name = faker.name().fullName();
+            return name;
+        }
+
+        public static String generatePhone() {
+            Faker faker = new Faker(new Locale("ru"));
+            String phone = faker.phoneNumber().phoneNumber();
+            return phone;
+        }
+
+    public static String generateAddress() {
+        Faker faker = new Faker(new Locale("ru"));
+        String address = faker.address().cityName();
+        return address;
     }
 
-    public String phoneNumber() {
-        return faker.phoneNumber().phoneNumber();
-    }
-
-    public String date(int daysFuture) {
+    public static String generateDate(int daysFuture) {
         return LocalDate.now().plusDays(daysFuture).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 }
