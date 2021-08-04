@@ -21,6 +21,6 @@ public class FakerTestDataGenerator {
     }
 
     public String date(int daysFuture) {
-           return LocalDate.now().plusDays(daysFuture).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        return LocalDate.now().plusDays(daysFuture).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 }
