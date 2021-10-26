@@ -8,17 +8,17 @@ public class FakerTestDataGenerator {
     private FakerTestDataGenerator() {
     }
 
-        public static String generateName() {
-            Faker faker = new Faker(new Locale("ru"));
-            String name = faker.name().fullName();
-            return name;
-        }
+    public static String generateName() {
+        Faker faker = new Faker(new Locale("ru"));
+        String name = faker.name().fullName();
+        return name;
+    }
 
-        public static String generatePhone() {
-            Faker faker = new Faker(new Locale("ru"));
-            String phone = faker.phoneNumber().phoneNumber();
-            return phone;
-        }
+    public static String generatePhone() {
+        Faker faker = new Faker(new Locale("ru"));
+        String phone = faker.phoneNumber().phoneNumber();
+        return phone;
+    }
 
     public static String generateAddress() {
         Faker faker = new Faker(new Locale("ru"));
